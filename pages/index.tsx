@@ -40,12 +40,4 @@ export default function HomePage() {
       </ul>
     </main>
   );
-  useEffect(() => {
-    const sub = client.models.Todo.observeQuery()
-      .subscribe(({ items }) => setTodos([...items]))
-  
-    return () => sub.unsubscribe()
-  }, []);
 }
-
-
